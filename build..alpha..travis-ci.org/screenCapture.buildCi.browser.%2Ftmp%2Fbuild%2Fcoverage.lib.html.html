@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-slow-deps/slow-deps/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-slow-deps/node_modules/slow-deps/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-slow-deps">npmtest-slow-deps (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-slow-deps/slow-deps/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-slow-deps/node_modules/slow-deps/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">82.91% <small>(97 / 117)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-slow-deps/slow-deps/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-slow-deps/node_modules/slow-deps/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -664,8 +662,8 @@
 &nbsp;
 'use strict'
 &nbsp;
-<span class="missing-if-branch" title="if path not taken" >I</span>if (!global.Promise) {
-<span class="cstat-no" title="statement not covered" >  global.Promise = require('lie')</span>
+<span class="missing-if-branch" title="if path not taken">I</span>if (!global.Promise) {
+<span class="cstat-no" title="statement not covered">  global.Promise = require('lie')</span>
 }
 var temp = require('temp')
 var fs = require('fs')
@@ -711,8 +709,8 @@ var argv = yargs
   .alias('h', 'help')
   .argv
 &nbsp;
-<span class="fstat-no" title="function not covered" >function formatPlural (num, strSingular, strPlural) {</span>
-<span class="cstat-no" title="statement not covered" >  return num + ' ' + (num === 1 ? strSingular : strPlural)</span>
+<span class="fstat-no" title="function not covered">function formatPlural (num, strSingular, strPlural) {</span>
+<span class="cstat-no" title="statement not covered">  return num + ' ' + (num === 1 ? strSingular : strPlural)</span>
 }
 &nbsp;
 function getDeps () {
@@ -722,43 +720,43 @@ function getDeps () {
     var devSkipped = 0
     var optionalSkipped = 0
     // Include devDependencies only if --production is absent
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (!argv.production) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (!argv.production) {
       extend(deps, pkgJson.devDependencies)
     } else {
-<span class="cstat-no" title="statement not covered" >      devSkipped = Object.keys(pkgJson.devDependencies || {}).length</span>
+<span class="cstat-no" title="statement not covered">      devSkipped = Object.keys(pkgJson.devDependencies || {}).length</span>
     }
     // Include optionalDependencies only if --no-optional argument is absent.
     // Note that yargs parses "--no-*" deps in a special way, hence this `!== false` check.
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (argv.optional !== false) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (argv.optional !== false) {
       extend(deps, pkgJson.optionalDependencies)
     } else {
-<span class="cstat-no" title="statement not covered" >      optionalSkipped = Object.keys(pkgJson.optionalDependencies || {}).length</span>
+<span class="cstat-no" title="statement not covered">      optionalSkipped = Object.keys(pkgJson.optionalDependencies || {}).length</span>
     }
     var startMessage = 'Analyzing ' + Object.keys(deps).length + ' dependencies'
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (devSkipped &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >optionalSkipped)</span> {
-<span class="cstat-no" title="statement not covered" >      startMessage += ' (skipping ' + formatPlural(devSkipped, 'devDependency', 'devDependencies') +</span>
+    <span class="missing-if-branch" title="if path not taken">I</span>if (devSkipped &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">optionalSkipped)</span> {
+<span class="cstat-no" title="statement not covered">      startMessage += ' (skipping ' + formatPlural(devSkipped, 'devDependency', 'devDependencies') +</span>
         ' and ' + formatPlural(optionalSkipped, 'optionalDependency', 'optionalDependencies') + ')'
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (devSkipped) {
-<span class="cstat-no" title="statement not covered" >      startMessage += ' (skipping ' + formatPlural(devSkipped, 'devDependency', 'devDependencies') + ')'</span>
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (optionalSkipped) {
-<span class="cstat-no" title="statement not covered" >      startMessage += ' (skipping ' + formatPlural(optionalSkipped, 'optionalDependency', 'optionalDependencies') + ')'</span>
+    } else <span class="missing-if-branch" title="if path not taken">I</span>if (devSkipped) {
+<span class="cstat-no" title="statement not covered">      startMessage += ' (skipping ' + formatPlural(devSkipped, 'devDependency', 'devDependencies') + ')'</span>
+    } else <span class="missing-if-branch" title="if path not taken">I</span>if (optionalSkipped) {
+<span class="cstat-no" title="statement not covered">      startMessage += ' (skipping ' + formatPlural(optionalSkipped, 'optionalDependency', 'optionalDependencies') + ')'</span>
     }
     startMessage += '...'
     console.log(startMessage)
     return deps
-  }).catch(<span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('No package.json in the current directory.')</span>
+  }).catch(<span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('No package.json in the current directory.')</span>
   })
 }
 &nbsp;
 function getShrinkwrapDeps () {
-  return stat('npm-shrinkwrap.json').then(<span class="fstat-no" title="function not covered" >function (file) {</span>
-<span class="cstat-no" title="statement not covered" >    if (argv.shrinkwrap !== false &amp;&amp; file.isFile()) {</span>
-<span class="cstat-no" title="statement not covered" >      return readFile('npm-shrinkwrap.json', 'utf8').then(<span class="fstat-no" title="function not covered" >function (str) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return JSON.parse(str).dependencies || {}</span>
+  return stat('npm-shrinkwrap.json').then(<span class="fstat-no" title="function not covered">function (file) {</span>
+<span class="cstat-no" title="statement not covered">    if (argv.shrinkwrap !== false &amp;&amp; file.isFile()) {</span>
+<span class="cstat-no" title="statement not covered">      return readFile('npm-shrinkwrap.json', 'utf8').then(<span class="fstat-no" title="function not covered">function (str) {</span></span>
+<span class="cstat-no" title="statement not covered">        return JSON.parse(str).dependencies || {}</span>
       })
     }
-<span class="cstat-no" title="statement not covered" >    return {}</span>
+<span class="cstat-no" title="statement not covered">    return {}</span>
   }).catch(function () {
     return {}
   })
@@ -770,18 +768,18 @@ function createEmptyNpmrc (dir) {
 &nbsp;
 function setupNpmrc (toDir) {
   // copy .npmrc from current directory if possible
-  return stat('.npmrc').then(<span class="fstat-no" title="function not covered" >function (file) {</span>
-<span class="cstat-no" title="statement not covered" >    if (file.isFile()) {</span>
-<span class="cstat-no" title="statement not covered" >      return ncp('.npmrc', path.join(toDir, '.npmrc'))</span>
+  return stat('.npmrc').then(<span class="fstat-no" title="function not covered">function (file) {</span>
+<span class="cstat-no" title="statement not covered">    if (file.isFile()) {</span>
+<span class="cstat-no" title="statement not covered">      return ncp('.npmrc', path.join(toDir, '.npmrc'))</span>
     }
-<span class="cstat-no" title="statement not covered" >    return createEmptyNpmrc(toDir)</span>
+<span class="cstat-no" title="statement not covered">    return createEmptyNpmrc(toDir)</span>
   }).catch(function () {
     return createEmptyNpmrc(toDir)
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function createNpmShrinkwrap (dir, dep) {</span>
-<span class="cstat-no" title="statement not covered" >  return writeFile(path.join(dir, 'npm-shrinkwrap.json'), JSON.stringify(dep), 'utf8')</span>
+<span class="fstat-no" title="function not covered">function createNpmShrinkwrap (dir, dep) {</span>
+<span class="cstat-no" title="statement not covered">  return writeFile(path.join(dir, 'npm-shrinkwrap.json'), JSON.stringify(dep), 'utf8')</span>
 }
 &nbsp;
 function createPackageJson (dir, dep, version) {
@@ -805,10 +803,10 @@ function doNpmInstalls (deps, shrinkwrapDeps) {
       // set the cache to a local cache directory
       return appendFile(path.join(dir, '.npmrc'), '\ncache=' + cache, 'utf8')
     }).then(function () {
-      <span class="missing-if-branch" title="else path not taken" >E</span>if (!shrinkwrapDeps[dep]) {
+      <span class="missing-if-branch" title="else path not taken">E</span>if (!shrinkwrapDeps[dep]) {
         return
       }
-<span class="cstat-no" title="statement not covered" >      return createNpmShrinkwrap(dir, shrinkwrapDeps[dep])</span>
+<span class="cstat-no" title="statement not covered">      return createNpmShrinkwrap(dir, shrinkwrapDeps[dep])</span>
     }).then(function () {
       return createPackageJson(dir, dep, version)
     }).then(function () {
@@ -877,17 +875,18 @@ Promise.all([getDeps(), getShrinkwrapDeps()]).then(function (results) {
   return doNpmInstalls(deps, shrinkwrap)
 }).then(function () {
   process.exit(0)
-}).catch(<span class="fstat-no" title="function not covered" >function (err) {</span>
-<span class="cstat-no" title="statement not covered" >  console.error(err)</span>
-<span class="cstat-no" title="statement not covered" >  console.error(err.stack)</span>
-<span class="cstat-no" title="statement not covered" >  process.exit(1)</span>
+}).catch(<span class="fstat-no" title="function not covered">function (err) {</span>
+<span class="cstat-no" title="statement not covered">  console.error(err)</span>
+<span class="cstat-no" title="statement not covered">  console.error(err.stack)</span>
+<span class="cstat-no" title="statement not covered">  process.exit(1)</span>
 })
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 17:16:34 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 04:39:57 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
