@@ -1,6 +1,6 @@
 # npmtest-slow-deps
 
-#### test coverage for  [slow-deps (v1.4.0)](https://github.com/nolanlawson/slow-deps#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-slow-deps.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-slow-deps) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-slow-deps.svg)](https://travis-ci.org/npmtest/node-npmtest-slow-deps)
+#### basic test coverage for  [slow-deps (v1.4.0)](https://github.com/nolanlawson/slow-deps#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-slow-deps.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-slow-deps) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-slow-deps.svg)](https://travis-ci.org/npmtest/node-npmtest-slow-deps)
 
 #### Measure which dependencies in a project are slowest to install
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-slow-deps/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-slow-deps/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-slow-deps/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-slow-deps/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-slow-deps/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-slow-deps/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-slow-deps/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-slow-deps/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-slow-deps/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-slow-deps/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-slow-deps/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-slow-deps/build/coverage.html/index.html)
 
